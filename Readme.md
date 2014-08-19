@@ -1,0 +1,13 @@
+According to the proposal of the project,  I wrote one R script in order to complete the five steps of the project.
+
+In first place, I use the package data.table for merging the training and the test sets into one data set. I use relative path and I suppose files are already downloaded at the working directory. If they were not downloaded, we should use the function download.file(). After getting the data set that I needed, I use the rm function to free memory.
+
+The step about extracting only the measurements on the mean and standard deviation is not clear enough. It is up to the student consider if the instruction refers to the variables that include mean() and std() at the end, or if we should include variables with "mean" as part of the name. I have considered the former, I mean, I have extracted only those variables that ended with mean() or std(). I think it is more logical and it forced me to practice more with regular expressions instead just look for the word “mean” or “std”.
+
+To replace the activity numbers by their names, can be done in a multiple ways (with the merge function, for example). I wanted to practice how to read values with an index, check a condition and then, replace them in a data frame without create a new column or something similar. I did it with a for loop, but I am sure there are other, and probably better, ways. 
+
+The step where we had to label the set with descriptive variable names was not clear again. I just followed the rules of the lectures, but, in the script, I divided the rename action into two steps. The first, I removed all characters that might cause problems : "(",  ")",  "-"  and, in the second step, I wrote the names with lower case letter. I consider that names are more readable if I had not done the last step but I did it for practicing and in order to follow the instructions given in the lectures. 
+
+To complete the final step: create the tiny data set, I use the plyr package and the function write.table as we were asked. As we had to submit only one file, this tiny data set contents 180 records. One record per subject and per activity. However, I wonder if 30 files (one per subject) or 6 files (one per activity) could be considered tiny data sets in this case.  
+
+Finally, I wrote the code book  taking into account the code book that we use to do the quizzes. I just copy the explanations about data supplied by the team who collected it and the description of the variables are kind of repetitive (and I am afraid they are boring too :(. For each variable I supply the name, a short explanation, type of variable (factor or number in this case) and levels for the former and  possible range for the latter.
